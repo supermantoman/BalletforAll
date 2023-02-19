@@ -1,6 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
 import Logo from './assets/logotypes.svg';
+
 
 const bgImage = require('./public/images/background-image.png')
 
@@ -48,7 +51,7 @@ const styles = StyleSheet.create({
   mainCopy: {
     flex: 1,
     color: '#fff',
-    fontSize: '32',
+    fontSize: '36',
     lineHeight: '40', // 적절한 높이로 조정
     fontWeight: 'bold',
     position: 'absolute',
