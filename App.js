@@ -1,7 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import Svg, { Image } from 'react-native-svg';
 
-const bgImage = require('./assets/background-image.png')
+const bgImage = require('./public/images/background-image.png')
+const logo = require('./public/images/logotypes.svg')
 
 export default function App() {
   return (
@@ -14,7 +16,8 @@ export default function App() {
           당신을 위해
         </Text>
       </ImageBackground>
-      <View></View>
+      <View styles={styles.logo}>
+      </View>
       <View></View>
     </View>
   );
@@ -27,13 +30,18 @@ const styles = StyleSheet.create({
     // flexDirection: 'row',
   },
   image: {
-    flex: 1,
+    flex: 2,
     resizeMode: 'contain',
   },
   mainCopy: {
     color: '#fff',
-    fontSize: '36',
-    lineHeight: '44', // 적절한 높이로 조정
+    fontSize: '42',
+    lineHeight: '48', // 적절한 높이로 조정
     fontWeight: 'bold',
+    marginLeft: 48,
+    marginTop: 152,
+  },
+  logo: {
+    flex: 1,
   }
 });
