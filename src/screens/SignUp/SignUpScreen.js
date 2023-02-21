@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import Logo from '../../../assets/logotypes.svg';
@@ -36,10 +36,12 @@ export default function SignUpScreen() {
       {/* 로그인 APIs */}
       <View style={SignUpStyles.loginWrap}>
         <View style={SignUpStyles.kakaoLogin}>
-          <Text style={SignUpStyles.kakaoText}>카카오 로그인</Text>
+        <Image source={require('../../assets/icons/kakaoLogo@svg.svg')} style={SignUpStyles.appleLogo}></Image>
+          <Text style={SignUpStyles.kakaoText}>카카오 계정으로 로그인</Text>
         </View>
         <View style={SignUpStyles.appleLogin}>
-          <Text style={SignUpStyles.appleText}>카카오 로그인</Text>
+          <Image source={require('../../assets/icons/appleLogo@svg.svg')} style={SignUpStyles.appleLogo}></Image>
+          <Text style={SignUpStyles.appleText}>Apple ID로 로그인</Text>
         </View>
         <Text style={SignUpStyles.nonLogin}>로그인없이 이용하기</Text>
       </View>

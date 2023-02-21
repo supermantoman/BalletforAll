@@ -32,29 +32,63 @@ export const SignUpStyles = StyleSheet.create({
   },
   loginWrap: {
     alignItems: 'center',
-    marginBottom: 88
+    position: 'absolute',
+    bottom: 80,
+    left: '6.5%',
+    justifyContent: 'center'
   },
   kakaoLogin: {
-    backgroundColor: 'yellow',
+    flex: 1,
+    flexDirection: 'row',
+    position: 'relative',
+    backgroundColor: '#FDE500',
     width: 327,
-    height: 66,
+    height: 56,
+    borderRadius: 4,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   appleLogin: {
+    flex: 1,
+    flexDirection: 'row',
+    position: 'relative',
     backgroundColor: 'white',
     width: 327,
-    height: 66,
+    height: 56,
+    borderRadius: 4,
     marginTop: 12,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   kakaoText: {
-    fontSize: 24,
+    letterSpacing: -0.5,
+    fontSize: 16,
+    fontWeight: '600'
   },
   appleText: {
-    fontSize: 24,
+    letterSpacing: -0.5,
+    fontSize: 16,
+    fontWeight: '600'
   },
   nonLogin: {
     marginTop: 20,
     fontSize: 16,
-    color: '#ccc',
-  }
+    color: '#b5b5b5',
+    textDecorationLine: 'underline',
+  },
+  appleLogo: {
+    position: 'absolute',
+    left: 20,
+    flex: 0.1,
+    height: 28,
+    width: 28,
+  },
+  kakaoLogo: {
+    position: 'absolute',
+    left: 20,
+    flex: 0.1,
+    height: 28,
+    width: 28,
+  },
 });
 
