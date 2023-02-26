@@ -11,7 +11,7 @@ export const SignUpStyles = StyleSheet.create({
   image: {
     flex: 1,
     resizeMode: 'contain',
-    opacity: 0.8,
+    opacity: 0.6,
   },
   mainCopy: {
     flex: 1,
@@ -20,7 +20,7 @@ export const SignUpStyles = StyleSheet.create({
     lineHeight: '46',
     fontWeight: 'bold',
     position: 'absolute',
-    marginTop: height * 0.05, 
+    marginTop: height * 0.08, 
     marginLeft: width * 0.05, 
   },
   logo: {
@@ -35,12 +35,9 @@ export const SignUpStyles = StyleSheet.create({
     position: 'absolute',
     bottom: 80,
     left: '6.5%',
-    justifyContent: 'center'
-  },
-  kakaoLogin: {
-    flex: 1,
-    flexDirection: 'row',
-    position: 'relative',
+    justifyContent: 'center',
+},
+  kakaoBtn: {
     backgroundColor: '#FDE500',
     width: 327,
     height: 56,
@@ -48,10 +45,7 @@ export const SignUpStyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-  appleLogin: {
-    flex: 1,
-    flexDirection: 'row',
-    position: 'relative',
+  appleBtn: {
     backgroundColor: 'white',
     width: 327,
     height: 56,
@@ -60,35 +54,9 @@ export const SignUpStyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-  kakaoText: {
-    letterSpacing: -0.5,
-    fontSize: 16,
-    fontWeight: '600'
-  },
-  appleText: {
-    letterSpacing: -0.5,
-    fontSize: 16,
-    fontWeight: '600'
-  },
-  nonLogin: {
-    marginTop: 20,
-    fontSize: 16,
-    color: '#b5b5b5',
-    textDecorationLine: 'underline',
-  },
-  appleLogo: {
-    position: 'absolute',
-    left: 20,
-    flex: 0.1,
-    height: 28,
-    width: 28,
-  },
   kakaoLogo: {
-    position: 'absolute',
-    left: 20,
-    flex: 0.1,
-    height: 28,
-    width: 28,
-  },
+    width: 40,
+    height: 40,
+  }
 });
 

@@ -20,7 +20,7 @@ export const SplashStyles = StyleSheet.create({
     lineHeight: '46',
     fontWeight: 'bold',
     position: 'absolute',
-    marginTop: height * 0.05, 
+    marginTop: height * 0.08, 
     marginLeft: width * 0.05, 
   },
   logo: {

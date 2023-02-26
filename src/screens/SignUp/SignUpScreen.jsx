@@ -1,14 +1,16 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { TouchableOpacity, Button, Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import Logo from '../../../assets/logotypes.svg';
 import { SignUpStyles } from '../SignUp/SignUpStyles';
+import CustomButton from '../../Components/LoginButton/LoginButton';
 
 const bgImage = require('../../../public/images/background-image.png');
 
 export default function SignUpScreen() {
+
   return (
     <View style={SignUpStyles.container}>
       {/* StatusBar */}
@@ -35,15 +37,12 @@ export default function SignUpScreen() {
 
       {/* 로그인 APIs */}
       <View style={SignUpStyles.loginWrap}>
-        <View style={SignUpStyles.kakaoLogin}>
-        <Image source={require('../../assets/icons/kakaoLogo@svg.svg')} style={SignUpStyles.appleLogo}></Image>
-          <Text style={SignUpStyles.kakaoText}>카카오 계정으로 로그인</Text>
-        </View>
-        <View style={SignUpStyles.appleLogin}>
-          <Image source={require('../../assets/icons/appleLogo@svg.svg')} style={SignUpStyles.appleLogo}></Image>
-          <Text style={SignUpStyles.appleText}>Apple ID로 로그인</Text>
-        </View>
-        <Text style={SignUpStyles.nonLogin}>로그인없이 이용하기</Text>
+        <CustomButton title="카카오 아이디로 로그인" buttonStyle={SignUpStyles.kakaoBtn} onPress={() => console.log('Button pressed!')}>
+          <Image source={require('../../assets/icons/kakaoLogo.png')} style={SignUpStyles.kakaoLogo} />
+        </CustomButton>
+        <CustomButton title="Apple ID로 로그인" buttonStyle={SignUpStyles.appleBtn} onPress={() => console.log('Button pressed!')}>
+          <Image source={require('../../assets/icons/appleLogo.png')} style={SignUpStyles.appleLogo} />
+        </CustomButton>
       </View>
 
     </View>
