@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -6,9 +6,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import Logo from '../../../assets/logotypes.svg';
 import { SplashStyles } from '../SplashScreen/SplashStyles';
 
+
 const bgImage = require('../../../public/images/background-image.png');
 
-export default function SplashScreen() {
+export default function SplashScreen({ navigation }) {
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate('SignUpScreen');
+    }, 3000);
+  }, []);
   return (
     <View style={SplashStyles.container}>
       {/* StatusBar */}

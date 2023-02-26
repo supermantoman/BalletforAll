@@ -1,15 +1,18 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar }  from 'expo-status-bar';
 import { TouchableOpacity, Button, Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import Logo from '../../../assets/logotypes.svg';
 import { SignUpStyles } from '../SignUp/SignUpStyles';
 import CustomButton from '../../Components/LoginButton/LoginButton';
+import { useNavigation } from '@react-navigation/native';
 
 const bgImage = require('../../../public/images/background-image.png');
 
 export default function SignUpScreen() {
+
+  const navigation = useNavigation();
 
   return (
     <View style={SignUpStyles.container}>
@@ -37,10 +40,10 @@ export default function SignUpScreen() {
 
       {/* 로그인 APIs */}
       <View style={SignUpStyles.loginWrap}>
-        <CustomButton title="카카오 아이디로 로그인" buttonStyle={SignUpStyles.kakaoBtn} onPress={() => console.log('Button pressed!')}>
+        <CustomButton title="카카오 아이디로 로그인" buttonStyle={SignUpStyles.kakaoBtn} onPress={() => {navigation.navigate('TermsScreen')}}>
           <Image source={require('../../assets/icons/kakaoLogo.png')} style={SignUpStyles.kakaoLogo} />
         </CustomButton>
-        <CustomButton title="Apple ID로 로그인" buttonStyle={SignUpStyles.appleBtn} onPress={() => console.log('Button pressed!')}>
+        <CustomButton title="Apple ID로 로그인" buttonStyle={SignUpStyles.appleBtn} onPress={() => {navigation.navigate('TermsScreen')}}>
           <Image source={require('../../assets/icons/appleLogo.png')} style={SignUpStyles.appleLogo} />
         </CustomButton>
       </View>
