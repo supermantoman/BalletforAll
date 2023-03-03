@@ -40,6 +40,7 @@ export default function App() {
           options={{ 
             headerShown: true, 
             headerLeft: ({navigation}) => <BackButton navigation={navigation} />,
+            headerStyle: {shadowColor: 'transparent' },
             title: '내 위치 설정하기', 
           }}
         />

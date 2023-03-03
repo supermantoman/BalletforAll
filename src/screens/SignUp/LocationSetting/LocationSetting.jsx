@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Stylesheet, View, Text, CheckBox } from 'react-native';
+import { Stylesheet, View, Text, CheckBox, TextInput, Image, TouchableOpacity } from 'react-native';
 import { LocationSettingStyles } from "./LocationSettingStyles";
 
 export default function LocationSetting() {
@@ -13,7 +13,15 @@ export default function LocationSetting() {
       {/* 시군구동 선택영역*/}
       {/* 설정하기 버튼 */}
 
-      <View style={LocationSettingStyles.searchWrap}></View>
+      <View style={LocationSettingStyles.searchWrap}>
+        <TextInput 
+        style={LocationSettingStyles.input}
+        placeholder="동이름(읍,면)으로 검색"></TextInput>
+
+        <View>
+          <Image source={require('../../../assets/icons/myLocation.png')} style={LocationSettingStyles.myLocation}></Image>
+        </View>
+      </View>
       <View style={LocationSettingStyles.siGoonGooDong}>
         <View style={LocationSettingStyles.si}></View>
         <View style={LocationSettingStyles.goonGo}></View>

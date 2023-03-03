@@ -8,11 +8,15 @@ export const LocationSettingStyles = StyleSheet.create({
   },
   searchWrap: {
     flex: 0.1,
-    backgroundColor: 'yellow',
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    borderBottomColor: '#eee',
   },
   siGoonGooDong:{
     flex: 0.8,
-    backgroundColor: 'green',
+    backgroundColor: '#fff',
     flexDirection: 'row'
   },
   sumit:{
@@ -20,15 +24,28 @@ export const LocationSettingStyles = StyleSheet.create({
     backgroundColor: 'skyblue',
   },
   si:{
-    backgroundColor: '#24242',
+    backgroundColor: '#fff',
     flex: 1
   },
   goonGo:{
     flex: 1,
-    backgroundColor: 'black'
+    backgroundColor: '#fff'
   },
   dong:{
     flex: 1,
-    backgroundColor: '#666'
+    backgroundColor: '#fff'
   },
+  input:{
+    height: 48,
+    // marginHorizontal: 24,
+    backgroundColor: "#eee",
+    padding: 16,
+    width: '70%',
+  },
+  myLocation:{
+    marginLeft: 16,
+    width: 40,
+    height: 40,
+  },
+
 })
