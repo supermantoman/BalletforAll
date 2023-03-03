@@ -14,7 +14,6 @@ import CustomButton from '../../../Components/LoginButton/LoginButton';
 
 export default function LocationSetting() {
 
-
   return (
     <View style={LocationSettingStyles.container}> 
 
@@ -34,11 +33,9 @@ export default function LocationSetting() {
         </View>
       </View>
       <View style={LocationSettingStyles.siGoonGooDong}>
-        <ScrollView style={LocationSettingStyles.si}>
-          <Text>text</Text>
-        </ScrollView>
-        <ScrollView style={LocationSettingStyles.goonGo}></ScrollView>
-        <ScrollView style={LocationSettingStyles.dong}></ScrollView>
+        <ScrollView style={LocationSettingStyles.si} />
+        <ScrollView style={LocationSettingStyles.goonGo} />
+        <ScrollView style={LocationSettingStyles.dong} />
       </View>
 
       <View style={LocationSettingStyles.submit}>

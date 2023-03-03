@@ -12,10 +12,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import SplashScreen from './src/screens/SplashScreen/SplashScreen';
-import SignUpScreen from './src/screens/SignUp/SignUpScreen';
+import SignUpScreen from './src/screens/SignUp/SignUp/SignUpScreen';
 import TermsScreen from './src/screens/SignUp/Terms/TermsScreen';
 import BackButton from "./src/Components/BackButton";
 import LocationSetting from './src/screens/SignUp/LocationSetting/LocationSetting';
+import MainScreen from './src/screens/Home/Main/MainScreen';
 
 const Stack = createStackNavigator();
 
@@ -34,7 +35,7 @@ export default function App() {
             title: ' ', 
           }}
         /> */}
-        <Stack.Screen 
+        {/* <Stack.Screen 
           name="LocationSetting" 
           component={LocationSetting}
           options={{ 
@@ -43,7 +44,9 @@ export default function App() {
             headerStyle: {shadowColor: 'transparent' },
             title: '내 위치 설정하기', 
           }}
-        />
+        /> */}
+        <Stack.Screen name="MainScreen" component={MainScreen} />
+
       </Stack.Navigator>
     </NavigationContainer>    
   );
