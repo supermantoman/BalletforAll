@@ -1,10 +1,20 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Stylesheet, View, Text, CheckBox, TextInput, Image, TouchableOpacity } from 'react-native';
+import { Stylesheet, 
+    View, 
+    Text, 
+    CheckBox, 
+    TextInput, 
+    Image, 
+    TouchableOpacity,
+    ScrollView,
+ } from 'react-native';
 import { LocationSettingStyles } from "./LocationSettingStyles";
 import CustomButton from '../../../Components/LoginButton/LoginButton';
 
 export default function LocationSetting() {
+
+
   return (
     <View style={LocationSettingStyles.container}> 
 
@@ -24,9 +34,11 @@ export default function LocationSetting() {
         </View>
       </View>
       <View style={LocationSettingStyles.siGoonGooDong}>
-        <View style={LocationSettingStyles.si}></View>
-        <View style={LocationSettingStyles.goonGo}></View>
-        <View style={LocationSettingStyles.dong}></View>
+        <ScrollView style={LocationSettingStyles.si}>
+          <Text>text</Text>
+        </ScrollView>
+        <ScrollView style={LocationSettingStyles.goonGo}></ScrollView>
+        <ScrollView style={LocationSettingStyles.dong}></ScrollView>
       </View>
 
       <View style={LocationSettingStyles.submit}>
