@@ -2,6 +2,7 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Stylesheet, View, Text, CheckBox, TextInput, Image, TouchableOpacity } from 'react-native';
 import { LocationSettingStyles } from "./LocationSettingStyles";
+import CustomButton from '../../../Components/LoginButton/LoginButton';
 
 export default function LocationSetting() {
   return (
@@ -27,7 +28,17 @@ export default function LocationSetting() {
         <View style={LocationSettingStyles.goonGo}></View>
         <View style={LocationSettingStyles.dong}></View>
       </View>
-      <View style={LocationSettingStyles.sumit}></View>
+
+      <View style={LocationSettingStyles.submit}>
+      <CustomButton 
+      title="설정하기" 
+      onPress={()=>{console.log('hi')}} 
+      buttonStyle={LocationSettingStyles.submit}
+      textStyle={LocationSettingStyles.submitText} />
+      </View>
+
     </View>
+
+
   );
 }
