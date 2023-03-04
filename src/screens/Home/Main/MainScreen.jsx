@@ -3,19 +3,21 @@ import { MainScreenStyles } from "./MainScreenStyles";
 import { StatusBar }  from 'expo-status-bar';
 import { SwiperFlatList } from "react-native-swiper-flatlist";
 
-const colors = ['tomato', 'thistle', 'skyblue', 'teal'];
-
 export default function MainScreen (){
   return (
     <View style={MainScreenStyles.container}>
       <StatusBar style="light" />
       <ScrollView>
         {/* 배너 영역 */}
-        {/* 유튜브 영상 */}
-        {/* 푸터 */}
         <View >
         <View style={MainScreenStyles.swiperContainer}>
-        <SwiperFlatList autoplay autoplayDelay={2} autoplayLoop index={2} showPagination paginationStyleItem={{width: 8, height: 8}} >
+        <SwiperFlatList 
+        autoplay 
+        autoplayDelay={4} 
+        autoplayLoop index={3} 
+        showPagination 
+        paginationStyleItem={{width: 8, height: 8, opacity: 0.6, }}
+        autoplayLoopKeepAnimation >
           <View style={[MainScreenStyles.child, { backgroundColor: 'tomato' }]}>
           <Image style={MainScreenStyles.bgImage} source={require('../../../assets/images/mainBannerImage2.png')}/>
           </View>
@@ -44,11 +46,13 @@ export default function MainScreen (){
 
         {/* 내 위치 설정 및 필터영역 */}
         <View style={MainScreenStyles.filterWrap}>
-          <Text style={MainScreenStyles.addressText}>서초 1동</Text>
-          
+          <View style={{flexDirection:'row', alignItems: 'center'}}>
+            <Text style={MainScreenStyles.addressText}>서초 1동</Text>
+          <Image style={{ marginLeft:2 ,width: 18, height:12, resizeMode:'contain'}} source={require('../../../assets/icons/downArrow.png')}></Image>
+          </View>
           <View style={MainScreenStyles.filtering}>
-            <Text>가까운 순</Text>
-            <Image source={require('../../../assets/icons/downArrow-Thin.png')}></Image>
+            <Text style={{fontSize:12}}>가까운 순</Text>
+            <Image style={{marginLeft: 4, width:11, height: 5}} source={require('../../../assets/icons/downArrow-Thin.png')}></Image>
           </View>
         </View>
 
