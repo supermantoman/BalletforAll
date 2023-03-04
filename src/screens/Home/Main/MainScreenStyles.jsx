@@ -1,9 +1,10 @@
 import { Dimensions, StyleSheet } from 'react-native';
+const { width } = Dimensions.get('window');
 
 export const MainScreenStyles = StyleSheet.create({
   container: {
     flex:1,
-    backgroundColor: '#ccc'
+    backgroundColor: '#f4f4f4'
   },
   bgImage: {
     flex: 1,
@@ -54,7 +55,7 @@ export const MainScreenStyles = StyleSheet.create({
   titleWrap:{
     justifyContent: 'space-between',
     alignItems: 'center',
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   listItem :{
     backgroundColor: '#fff',
@@ -63,6 +64,10 @@ export const MainScreenStyles = StyleSheet.create({
     position: 'relative',
     alignItems: 'center',
     marginHorizontal: 24,
+    shadowColor: "rgb (50, 50, 50)",
+    shadowOpacity: 0.2, 
+    shadowRadius: 10,
+    shadowOffset: {height: 4, width: 0,},
   },
   itemImage:{
     resizeMode: 'cover',
@@ -70,8 +75,20 @@ export const MainScreenStyles = StyleSheet.create({
     maxWidth: '50%',
     position: 'absolute',
   },
-  filtering:{
-    backgroundColor: 'blue',
+  arrowWrap: {
+    flexDirection: 'row',
   },
+  filtering:{
+    backgroundColor: '#e5e5e5',
+    paddingVertical: 7.5,
+    paddingHorizontal: 10.5,
+    borderRadius: 999,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    flexDirection: 'row'
+  },
+  child: { justifyContent: 'center', width, height: 486, resizeMode: 'stretch' },
+  testText: { fontSize: 16, textAlign: 'center' },
+  swiperContainer: { flex: 1, backgroundColor: 'white' },
 });
 
