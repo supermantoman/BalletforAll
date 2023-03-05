@@ -35,7 +35,8 @@ export default function App() {
             title: ' ', 
           }}
         /> */}
-        {/* <Stack.Screen 
+        <Stack.Screen name="MainScreen" component={MainScreen} />
+        <Stack.Screen 
           name="LocationSetting" 
           component={LocationSetting}
           options={{ 
@@ -44,8 +45,7 @@ export default function App() {
             headerStyle: {shadowColor: 'transparent' },
             title: '내 위치 설정하기', 
           }}
-        /> */}
-        <Stack.Screen name="MainScreen" component={MainScreen} />
+        />      
 
       </Stack.Navigator>
     </NavigationContainer>    

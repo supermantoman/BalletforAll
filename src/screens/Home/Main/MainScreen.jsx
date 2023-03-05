@@ -3,10 +3,14 @@ import TabNavigator, {  } from "../../../Components/TabNavigator/TabNavigator";
 import { MainScreenStyles } from "./MainScreenStyles";
 import { StatusBar }  from 'expo-status-bar';
 import { SwiperFlatList } from "react-native-swiper-flatlist";
-
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 export default function MainScreen (){
 
-
+  const navigation = useNavigation();
+  
   return (
     <View style={MainScreenStyles.container}>
       <StatusBar style="light" />
@@ -49,13 +53,13 @@ export default function MainScreen (){
 
         {/* 내 위치 설정 및 필터영역 */}
         <View style={MainScreenStyles.filterWrap}>
-          <View style={{flexDirection:'row', alignItems: 'center'}}>
+          <TouchableOpacity style={{flexDirection:'row', alignItems: 'center'}} onPress={()=>{navigation.navigate('LocationSetting')}}>
             <Text style={MainScreenStyles.addressText}>서초 1동</Text>
-          <Image style={{ marginLeft:2 ,width: 18, height:12, resizeMode:'contain'}} source={require('../../../assets/icons/downArrow.png')}></Image>
-          </View>
+          <Image style={{ marginLeft:2 ,width: 18, height:10, resizeMode:'contain'}} source={require('../../../assets/icons/downArrow.png')}></Image>
+          </TouchableOpacity>
           <View style={MainScreenStyles.filtering} >
             <Text style={{fontSize:12}}>가까운 순</Text>
-            <Image style={{marginLeft: 4, width:11, height: 5}} source={require('../../../assets/icons/downArrow-Thin.png')}></Image>
+            <Image style={{marginLeft: 4, width:12, height: 6 , resizeMode:'contain' }} source={require('../../../assets/icons/downArrow-Thin.png')}></Image>
           </View>
         </View>
 

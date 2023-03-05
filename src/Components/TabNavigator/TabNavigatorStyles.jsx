@@ -8,9 +8,9 @@ export const TabNavigatorStyles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 40,
     paddingTop: 12,
-    paddingBottom: 42,
+    paddingBottom: 36,
     borderTopWidth: 0.5,
-    borderTopColor: '#ccc',
+    borderTopColor: '#e5e5e5',
   },
 });
 
