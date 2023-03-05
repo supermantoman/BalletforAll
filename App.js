@@ -24,8 +24,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="SplashScreen" screenOptions={{ headerShown: false }}>
-        {/* <Stack.Screen name="SplashScreen" component={SplashScreen} />
-        <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
+        {/* <Stack.Screen name="SplashScreen" component={SplashScreen} /> 
+        <Stack.Screen name="SignUpScreen" component={SignUpScreen} /> 
         <Stack.Screen 
           name="TermsScreen" 
           component={TermsScreen}
@@ -51,7 +51,3 @@ export default function App() {
     </NavigationContainer>    
   );
 }
-
-//App.js = 뿌리!!
-//라우터=컨트롤 타워
-//
