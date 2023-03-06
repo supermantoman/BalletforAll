@@ -17,6 +17,9 @@ import TermsScreen from './src/screens/SignUp/Terms/TermsScreen';
 import BackButton from "./src/Components/BackButton";
 import LocationSetting from './src/screens/SignUp/LocationSetting/LocationSetting';
 import MainScreen from './src/screens/Home/Main/MainScreen';
+import SearchScreen from './src/screens/Search/SearchDefault/SearchScreen';
+import MapDefaultScreen from './src/screens/MapView/Default/MapDefaultScreen';
+import MyBalletScreen from './src/screens/MyPage/Member/MyBalletScreen';
 
 const Stack = createStackNavigator();
 
@@ -36,6 +39,7 @@ export default function App() {
           }}
         /> */}
         <Stack.Screen name="MainScreen" component={MainScreen} />
+        
         <Stack.Screen 
           name="LocationSetting" 
           component={LocationSetting}
@@ -46,6 +50,10 @@ export default function App() {
             title: '내 위치 설정하기', 
           }}
         />      
+        <Stack.Screen name="SearchScreen" component={SearchScreen} />
+        <Stack.Screen name="MapDefaultScreen" component={MapDefaultScreen} />
+        <Stack.Screen name="MyBalletScreen" component={MyBalletScreen} />
+
 
       </Stack.Navigator>
     </NavigationContainer>    

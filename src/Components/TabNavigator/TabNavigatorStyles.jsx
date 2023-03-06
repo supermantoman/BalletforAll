@@ -6,11 +6,14 @@ export const TabNavigatorStyles = StyleSheet.create({
     backgroundColor: '#fff', 
     flexDirection:'row', 
     justifyContent: 'space-between',
-    paddingHorizontal: 40,
-    paddingTop: 12,
+    paddingHorizontal: 44,
+    paddingTop: 8,
     paddingBottom: 36,
-    borderTopWidth: 0.5,
-    borderTopColor: '#e5e5e5',
+    borderTopWidth: 1.5,
+    borderTopColor: '#333333',
+    position: 'absolute',
+    width: 375,
+    bottom: 0
   },
 });
 

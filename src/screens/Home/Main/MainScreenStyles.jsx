@@ -88,6 +88,6 @@ export const MainScreenStyles = StyleSheet.create({
   },
   child: { justifyContent: 'center', width, height: 486, resizeMode: 'stretch' },
   testText: { fontSize: 16, textAlign: 'center' },
-  swiperContainer: { flex: 1, backgroundColor: 'white' },
+  swiperContainer: { flex: 1, backgroundColor: '#eee' },
 });
 
