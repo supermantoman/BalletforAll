@@ -8,7 +8,7 @@ export default function BackButton() {
   const navigation = useNavigation();
 
   return (
-    <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen')}>
+    <TouchableOpacity onPress={() => {navigation.goBack()}}>
       <Image source={backButton} style={{ width: 25, height: 25, marginLeft: 24, }} />
     </TouchableOpacity>
   );

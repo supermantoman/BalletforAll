@@ -7,8 +7,12 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { useState } from "react";
+import { FilterModal } from "../../../Components/FilterModal/FilterModal";
+
 export default function MainScreen (){
 
+  const [filterModalisVisible, setFilterModalisVisible] = useState(false);
   const navigation = useNavigation();
   
   return (
@@ -17,7 +21,7 @@ export default function MainScreen (){
       <ScrollView>
         {/* 배너 영역 */}
         <View >
-        <View style={MainScreenStyles.swiperContainer}>
+        <TouchableOpacity style={MainScreenStyles.swiperContainer}>
         <SwiperFlatList 
         autoplay 
         autoplayDelay={4} 
@@ -25,51 +29,45 @@ export default function MainScreen (){
         showPagination 
         paginationStyleItem={{width: 8, height: 8, opacity: 0.6, }}
         autoplayLoopKeepAnimation >
-          <View style={[MainScreenStyles.child, { backgroundColor: 'tomato' }]}>
-          <Image style={MainScreenStyles.bgImage} source={require('../../../assets/images/mainBannerImage2.png')}/>
-          </View>
-          <View style={[MainScreenStyles.child, { backgroundColor: 'thistle' }]}>
-          <Image style={MainScreenStyles.bgImage} source={require('../../../assets/images/mainBannerImage2.png')}/>
-          </View>
-          <View style={[MainScreenStyles.child, { backgroundColor: 'skyblue' }]}>
-          <Image style={MainScreenStyles.bgImage} source={require('../../../assets/images/mainBannerImage2.png')}/>
-          </View>
-          <View style={[MainScreenStyles.child, { backgroundColor: 'teal' }]}>
-          <Image style={MainScreenStyles.bgImage} source={require('../../../assets/images/mainBannerImage2.png')}/>
-          </View>
+          <TouchableOpacity activeOpacity={0.9} style={[MainScreenStyles.child, { backgroundColor: 'tomato' }]}>
+            <Image style={MainScreenStyles.bgImage} source={require('../../../assets/images/mainBannerImage2.png')}/>
+          </TouchableOpacity>
+          <TouchableOpacity activeOpacity={0.9} style={[MainScreenStyles.child, { backgroundColor: 'thistle' }]}>
+            <Image style={MainScreenStyles.bgImage} source={require('../../../assets/images/mainBannerImage2.png')}/>
+          </TouchableOpacity>
+          <TouchableOpacity activeOpacity={0.9} style={[MainScreenStyles.child, { backgroundColor: 'skyblue' }]}>
+            <Image style={MainScreenStyles.bgImage} source={require('../../../assets/images/mainBannerImage2.png')}/>
+          </TouchableOpacity>
+          <TouchableOpacity activeOpacity={0.9} style={[MainScreenStyles.child, { backgroundColor: 'teal' }]}>
+            <Image style={MainScreenStyles.bgImage} source={require('../../../assets/images/mainBannerImage2.png')}/>
+          </TouchableOpacity>
         </SwiperFlatList>
-        </View>
-          <View style={MainScreenStyles.textWrap}>
-            <Text style={MainScreenStyles.bannerText}>
-              빛나는{'\n'} 
-              당신을{'\n'}
-              생각하다</Text>
-            <Text style={MainScreenStyles.bannerSubText}>
-              마케팅문구는{'\n'}
-              두 줄로 한정
-            </Text>
-          </View>
+        </TouchableOpacity>
+
         </View>
 
         {/* 내 위치 설정 및 필터영역 */}
         <View style={MainScreenStyles.filterWrap}>
-          <TouchableOpacity style={{flexDirection:'row', alignItems: 'center'}} onPress={()=>{navigation.navigate('LocationSetting')}}>
+          <TouchableOpacity activeOpacity={1} style={{flexDirection:'row', alignItems: 'center'}} onPress={()=>{navigation.navigate('LocationSetting')}}>
             <Text style={MainScreenStyles.addressText}>서초 1동</Text>
           <Image style={{ marginLeft:2 ,width: 18, height:10, resizeMode:'contain'}} source={require('../../../assets/icons/downArrow.png')}></Image>
           </TouchableOpacity>
-          <View style={MainScreenStyles.filtering} >
+
+          <TouchableOpacity style={MainScreenStyles.filtering} onPress={()=>{console.log('hi');}} >
             <Text style={{fontSize:12}}>가까운 순</Text>
             <Image style={{marginLeft: 4, width:12, height: 6 , resizeMode:'contain' }} source={require('../../../assets/icons/downArrow-Thin.png')}></Image>
-          </View>
+          </TouchableOpacity>
         </View>
 
         {/* 학원 리스트 */}
-        <View style={MainScreenStyles.listItem}>
-          <Image style={MainScreenStyles.itemImage} source={require('../../../assets/images/itemImage.png')} />
-          <View style={MainScreenStyles.arrowWrap}>
-            <Image source={require('../../../assets/icons/ProductLeftArrow.png')} />
-            <Image source={require('../../../assets/icons/ProductRightArrow.png')} />
-          </View>
+        <TouchableOpacity activeOpacity={0.9} style={MainScreenStyles.listItem}>
+          <SwiperFlatList style={{width: '100%'}}>
+            <Image style={MainScreenStyles.itemImage} source={require('../../../assets/images/itemImage.png')} />
+            <View style={MainScreenStyles.arrowWrap}>
+              <Image source={require('../../../assets/icons/ProductLeftArrow.png')} />
+              <Image source={require('../../../assets/icons/ProductRightArrow.png')} />
+            </View>
+          </SwiperFlatList>
           <View style={[MainScreenStyles.infoWrap, {backgroundColor:'#fff'}]}>
             <View style={MainScreenStyles.titleWrap}>
               <Text style={{fontSize:22, fontWeight: 'bold'}}>이화본발레</Text>
@@ -80,10 +78,12 @@ export default function MainScreen (){
           <Text style={{fontWeight:'400', marginBottom:12,letterSpacing: -0.2}}><Text style={{fontWeight:'600'}}>쿠폰수업</Text>     1회당 60,000원 ~</Text>
           <Text style={{fontWeight:'400',letterSpacing: -0.2 }}><Text style={{fontWeight:'600'}}>작품반</Text>        백조의 호수, 르네의 눈물 외 2개</Text>
           </View>
-        </View>
+        </TouchableOpacity>
 
       </ScrollView>
       <TabNavigator /> 
     </View>
+
+
   )
 }

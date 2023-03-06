@@ -4,12 +4,13 @@ const { width } = Dimensions.get('window');
 export const MainScreenStyles = StyleSheet.create({
   container: {
     flex:1,
-    backgroundColor: '#ccc'
+    backgroundColor: '#eee'
   },
   bgImage: {
     flex: 1,
-    resizeMode: 'stretch',
-    position: 'relative'
+    resizeMode: 'cover',
+    position: 'relative',
+    width: 375,
   },
   textWrap:{
     flexDirection: 'column',
