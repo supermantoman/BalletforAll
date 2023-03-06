@@ -38,7 +38,7 @@ export default function App() {
             title: ' ', 
           }}
         /> */}
-        <Stack.Screen name="MainScreen" component={MainScreen} />
+        <Stack.Screen name="MainScreen" component={MainScreen} options={{animationEnabled: false}}/>
         
         <Stack.Screen 
           name="LocationSetting" 
@@ -50,9 +50,9 @@ export default function App() {
             title: '내 위치 설정하기', 
           }}
         />      
-        <Stack.Screen name="SearchScreen" component={SearchScreen} />
-        <Stack.Screen name="MapDefaultScreen" component={MapDefaultScreen} />
-        <Stack.Screen name="MyBalletScreen" component={MyBalletScreen} />
+        <Stack.Screen name="SearchScreen" component={SearchScreen} options={{animationEnabled: false}}/>
+        <Stack.Screen name="MapDefaultScreen" component={MapDefaultScreen} options={{animationEnabled: false}} />
+        <Stack.Screen name="MyBalletScreen" component={MyBalletScreen} options={{animationEnabled: false}} />
 
 
       </Stack.Navigator>
