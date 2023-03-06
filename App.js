@@ -20,6 +20,7 @@ import MainScreen from './src/screens/Home/Main/MainScreen';
 import SearchScreen from './src/screens/Search/SearchDefault/SearchScreen';
 import MapDefaultScreen from './src/screens/MapView/Default/MapDefaultScreen';
 import MyBalletScreen from './src/screens/MyPage/Member/MyBalletScreen';
+import AcademyDetailScreen from './src/screens/Home/DetailPage/AcademyPageScreen/AcademyDetailScreen';
 
 const Stack = createStackNavigator();
 
@@ -53,6 +54,7 @@ export default function App() {
         <Stack.Screen name="SearchScreen" component={SearchScreen} options={{animationEnabled: false}}/>
         <Stack.Screen name="MapDefaultScreen" component={MapDefaultScreen} options={{animationEnabled: false}} />
         <Stack.Screen name="MyBalletScreen" component={MyBalletScreen} options={{animationEnabled: false}} />
+        <Stack.Screen name="AcademyDetailScreen" component={AcademyDetailScreen} />
 
 
       </Stack.Navigator>

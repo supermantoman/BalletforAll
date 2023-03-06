@@ -24,10 +24,10 @@ export default function MainScreen (){
         <TouchableOpacity style={MainScreenStyles.swiperContainer}>
         <SwiperFlatList 
         autoplay 
-        autoplayDelay={4} 
-        autoplayLoop index={3} 
+        autoplayDelay={6} 
+        autoplayLoop index={1} 
         showPagination 
-        paginationStyleItem={{width: 8, height: 8, opacity: 0.6, }}
+        paginationStyleItem={{marginHorizontal: 6, marginVertical:-10, width: 8, height: 8, opacity: 0.6, }}
         autoplayLoopKeepAnimation >
           <TouchableOpacity activeOpacity={0.9} style={[MainScreenStyles.child, { backgroundColor: 'tomato' }]}>
             <Image style={MainScreenStyles.bgImage} source={require('../../../assets/images/mainBannerImage2.png')}/>
@@ -60,8 +60,8 @@ export default function MainScreen (){
         </View>
 
         {/* 학원 리스트 */}
-        <TouchableOpacity activeOpacity={0.9} style={MainScreenStyles.listItem}>
-          <SwiperFlatList style={{width: '100%'}}>
+        <TouchableOpacity activeOpacity={0.9} style={MainScreenStyles.listItem} onPress={()=>{navigation.navigate('AcademyDetailScreen')}}>
+          <SwiperFlatList style={{width: '100%'}} >
             <Image style={MainScreenStyles.itemImage} source={require('../../../assets/images/itemImage.png')} />
             <View style={MainScreenStyles.arrowWrap}>
               <Image source={require('../../../assets/icons/ProductLeftArrow.png')} />
