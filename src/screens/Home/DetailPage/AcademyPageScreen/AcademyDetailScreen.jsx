@@ -3,17 +3,17 @@ import { StyleSheet, View, Text, Button, Image, ScrollView, Dimensions, Modal } 
 import { AcademyDetailStyles } from "./AcademyDetailStyles";
 import { StatusBar }  from 'expo-status-bar';
 import TopInfo from '../../../../Components/DetailPageComponents/TopImage';
+import AcademyInfo from '../../../../Components/DetailPageComponents/AcademyInfo';
 
 export default function AcademyDetailScreen(){
 
   return (
     <View style={{flex:1}}>
       <StatusBar style="light" />
-        
-        <View style={{flex:0.5}}>
-          <TopInfo />
-        </View>      
+          
         <ScrollView>
+        <TopInfo />
+        <AcademyInfo />
         {/* <DetailTab />
         <InstructorInfo />
         <FacilityPhoto />
